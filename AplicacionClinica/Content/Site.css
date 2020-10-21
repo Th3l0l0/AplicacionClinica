@@ -1,0 +1,29 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/* Only affects 1600px width */
+@media only screen and (max-width: 1600px){ body,form { background: green; }}
+/* Only affects 1200px width */
+@media only screen and (max-width: 1200px){ body,form { background: blue; }}
+/* Only affects 900px width */
+@media only screen and (max-width: 900px){ body,form { background: yellow; }} 
+/* Only affects 600px width */
+@media only screen and (max-width: 600px){ body,form { background: purple; }}
+/* Only affects 400px width */
+@media only screen and (max-width: 400px){ body,form { background: orange; }}

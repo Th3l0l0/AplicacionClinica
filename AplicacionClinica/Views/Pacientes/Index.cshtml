@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/Funciones.js"></script>
+    <title>Index</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Listado de Pacientes</h2>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();">Agregar Paciente</button><br /><br />
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Nombre de Paciente</th>
+                        <th>DNI</th>
+                        <th>Telefono</th>
+                        <th>Direccion</th>
+                        <th>Distrito</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                </tbody>
+            </table>
+        
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="codpac">Codigo</label>
+                            <input type="text" class="form-control" id="codpac" placeholder="Codigo" />
+                        </div>
+                        <div class="form-group">
+                            <label for="nompac">Nombre</label>
+                            <input type="text" class="form-control" id="nompac" placeholder="Nombre" />
+
+                        </div>
+                        <div class="form-group">
+                            <label for="dnipac">DNI</label>
+                            <input type="number" class="form-control" id="dnipac" placeholder="DNI" />
+
+                        </div>
+                        <div class="form-group">
+                            <label for="tel_cel">Telefono</label>
+                            <input type="number" class="form-control" id="tel_cel" placeholder="Telefono" />
+
+                        </div>
+                        <div class="form-group">
+                            <label for="dirpac">Direccion</label>
+                            <input type="text" class="form-control" id="dirpac" placeholder="Direccion" />
+
+                        </div>
+                        <div class="form-group">
+                            <label for="distritos">Distrito</label>
+                            <select class="form-control" id="distritos" name="distritos">
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">Guardar</button>
+                    <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="Update();">Actualizar</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
